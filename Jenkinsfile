@@ -5,7 +5,8 @@ def attachments = [
     color: '#ff0000'
   ]
 ]
-def slackResponse = slackSend(channel: "#pipeline-breaking-news", attachments: attachments)
+
+def slackResponse = slackSend(channel: "#JenkinsFinalProject", attachments: attachments)
 pipeline{
 	agent any;
 	stages{
