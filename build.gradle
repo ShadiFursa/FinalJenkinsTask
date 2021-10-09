@@ -12,6 +12,7 @@ sourceCompatibility = '11'
 repositories {
 	mavenCentral()
 }
+mainClassName = 'com.example.JenkinsProject.jenkinsProjectApplication'
 
 
 jar {
