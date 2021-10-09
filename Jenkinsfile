@@ -12,8 +12,11 @@ pipeline{
 					"./gradlew build"
 				}
 			}
-		}	
-
+		}
+		stage('Run'){
+            		steps{
+                		sh 'JENKINS_NODE_COOKIE=dontkill java -jar ./build/libs/JenkinsFinalTask-1.0-SNAPSHOT.jar &'
+            		}
+        	}	
 	}
-
 }
