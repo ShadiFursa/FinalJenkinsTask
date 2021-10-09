@@ -7,12 +7,13 @@ def attachments = [
 ]
 
 def slackResponse = slackSend(channel: "#JenkinsFinalProject", attachments: attachments)
+
 pipeline{
 	agent any;
 	stages{
 		stage('Clone Project'){
 			steps{
-				git branch: 'main', url: 'https://github.com/ShadiFursa/FinalJenkins.git'
+				git branch: 'main', url: 'https://github.com/ShadiFursa/FinalJenkinsTask.git'
 			}
 		}
 		stage('Build Project'){
