@@ -1,8 +1,6 @@
 def attachments = [
   [
-    text: 'I find your lack of faith disturbing!',
-    fallback: 'Hey, Vader seems to be mad at you.',
-    color: '#ff0000'
+    color: '#fff1E0'
   ]
 ]
 
@@ -14,6 +12,7 @@ pipeline{
 		stage('Clone Project'){
 			steps{
 				git branch: 'main', url: 'https://github.com/ShadiFursa/FinalJenkinsTask.git'
+
 			}
 		}
 		stage('Build Project'){
