@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="he" xmlns:th="http://www.w3.org/1999/xhtml">
+<html dir="rtl" lang="he" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <title>Shadi's Jenkins FinalTask</title>
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
 <div class="container">
@@ -15,14 +13,15 @@
             <th>קישור</th>
             <th>תיאור</th>
             <th>כותרת</th>
+            <th>זמן העלאה</th>
         </tr>
         <tr th:each="item: ${items}">
             <td>
                 <a th:href="${item.link}" th:text="${item.link}" target="_blank" />
-                <div th:text = "${item.pubDate}"></div>
             </td>
             <td th:utext= "${item.description}"></td>
             <td th:text ="${item.title}"></td>
+            <td th:text = "${item.pubDate}"></td>
         </tr>
     </table>
 </div>

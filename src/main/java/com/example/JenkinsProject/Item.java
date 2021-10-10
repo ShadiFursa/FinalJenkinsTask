@@ -1,6 +1,5 @@
 package com.example.JenkinsProject;
 
-
 public class Item {
     private String title;
     private String description;

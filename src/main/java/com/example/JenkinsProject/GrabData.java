@@ -1,19 +1,5 @@
 package com.example.JenkinsProject;
 
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.StringReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,8 +13,6 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-
-
 
 public class GrabData {
     private String path;
@@ -112,6 +96,7 @@ public class GrabData {
             Document doc = builder.parse(src);
             String title = doc.getElementsByTagName("title").item(0).getTextContent();
             String description = doc.getElementsByTagName("description").item(0).getTextContent();
+            System.out.println(description);
             String link = doc.getElementsByTagName("link").item(0).getTextContent();
             String pubDate = doc.getElementsByTagName("pubDate").item(0).getTextContent();
             String guid = doc.getElementsByTagName("guid").item(0).getTextContent();
